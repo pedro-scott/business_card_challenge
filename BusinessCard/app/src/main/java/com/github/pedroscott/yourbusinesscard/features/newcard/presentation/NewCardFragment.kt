@@ -252,9 +252,9 @@ class NewCardFragment : BottomSheetDialogFragment() {
             )
 
             tilNewCardName.errorListener(getString(R.string.new_card_error_name), validationConditions[tietNewCardName])
-            tilNewCardCompany.errorListener(getString(R.string.new_card_error_name), validationConditions[tietNewCardCompany])
-            tilNewCardPhone.errorListener(getString(R.string.new_card_error_name), validationConditions[tietNewCardPhone])
-            tilNewCardEmail.errorListener(getString(R.string.new_card_error_name), validationConditions[tietNewCardEmail])
+            tilNewCardCompany.errorListener(getString(R.string.new_card_error_company), validationConditions[tietNewCardCompany])
+            tilNewCardPhone.errorListener(getString(R.string.new_card_error_phone), validationConditions[tietNewCardPhone])
+            tilNewCardEmail.errorListener(getString(R.string.new_card_error_email), validationConditions[tietNewCardEmail])
 
             btNewCardSave.enableByFieldsValidation(validationConditions)
         }
