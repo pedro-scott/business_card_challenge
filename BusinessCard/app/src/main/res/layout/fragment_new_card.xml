@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.newcard.presentation.NewCardFragment"
+    android:background="@drawable/bg_bottom_sheet"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvNewCardLogo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="@dimen/high_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="65dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/teal_200">
+
+            <ImageView
+                android:id="@+id/ivNewCardLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/no_image"
+                android:adjustViewBounds="true"
+                android:importantForAccessibility="no"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNewCardAddLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/cvNewCardLogo"
+            app:layout_constraintEnd_toEndOf="@id/cvNewCardLogo"
+            app:fabSize="mini"
+            android:src="@drawable/ic_camera"
+            app:tint="@color/white"
+            android:importantForAccessibility="no"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNewCardName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/high_margin"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/edit_text_background"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusTopEnd="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/til_corners_radius"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/cvNewCardLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietNewCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/new_card_hint_name"
+                android:textColorHint="@color/hint_and_icon_color"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNewCardCompany"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/high_margin"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/edit_text_background"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusTopEnd="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/til_corners_radius"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/tilNewCardName"
+            app:layout_constraintStart_toStartOf="@id/tilNewCardName"
+            app:layout_constraintEnd_toEndOf="@id/tilNewCardName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietNewCardCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/new_card_hint_company"
+                android:textColorHint="@color/hint_and_icon_color"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNewCardPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/high_margin"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/edit_text_background"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusTopEnd="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/til_corners_radius"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/tilNewCardCompany"
+            app:layout_constraintStart_toStartOf="@id/tilNewCardCompany"
+            app:layout_constraintEnd_toEndOf="@id/tilNewCardCompany">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietNewCardPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:hint="@string/new_card_hint_phone"
+                android:textColorHint="@color/hint_and_icon_color"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNewCardEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/high_margin"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/edit_text_background"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusTopEnd="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomStart="@dimen/til_corners_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/til_corners_radius"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/tilNewCardPhone"
+            app:layout_constraintStart_toStartOf="@id/tilNewCardPhone"
+            app:layout_constraintEnd_toEndOf="@id/tilNewCardPhone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietNewCardEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:hint="@string/new_card_hint_email"
+                android:textColorHint="@color/hint_and_icon_color"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNewCardColorPicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/plus_high_margin"
+            android:text="@string/new_card_card_background_color"
+            app:layout_constraintTop_toBottomOf="@id/tilNewCardEmail"
+            app:layout_constraintBottom_toTopOf="@id/colorPickerBackground"
+            app:layout_constraintStart_toStartOf="@id/colorPickerBackground"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/colorPickerBackground"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:hslColoringMode="pure"
+            app:hslMode="hue"
+            app:layout_constraintTop_toBottomOf="@id/tvNewCardColorPicker1"
+            app:layout_constraintStart_toStartOf="@id/tilNewCardEmail"
+            app:layout_constraintEnd_toEndOf="@id/tilNewCardEmail"
+            />
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/lightnessPickerBackground"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:hslColoringMode="pure"
+            app:hslMode="lightness"
+            app:layout_constraintTop_toBottomOf="@id/colorPickerBackground"
+            app:layout_constraintStart_toStartOf="@id/colorPickerBackground"
+            app:layout_constraintEnd_toEndOf="@id/colorPickerBackground"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNewCardColorPicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/high_margin"
+            android:text="@string/new_card_card_text_color"
+            app:layout_constraintTop_toBottomOf="@id/lightnessPickerBackground"
+            app:layout_constraintBottom_toTopOf="@id/lightnessPickerTextColor"
+            app:layout_constraintStart_toStartOf="@id/tvNewCardColorPicker1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+
+        <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+            android:id="@+id/lightnessPickerTextColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:hslColoringMode="pure"
+            app:hslMode="lightness"
+            app:layout_constraintTop_toBottomOf="@id/tvNewCardColorPicker2"
+            app:layout_constraintStart_toStartOf="@id/lightnessPickerBackground"
+            app:layout_constraintEnd_toEndOf="@id/lightnessPickerBackground"
+            />
+
+        <Button
+            android:id="@+id/btNewCardSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/plus_high_margin"
+            android:layout_marginBottom="@dimen/high_margin"
+            android:text="@string/new_card_button_save"
+            android:enabled="false"
+            app:backgroundTint="@color/teal_200"
+            app:layout_constraintTop_toBottomOf="@id/lightnessPickerTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lightnessPickerTextColor"
+            app:layout_constraintEnd_toEndOf="@id/lightnessPickerTextColor"
+            />
+
+        <View
+            android:id="@+id/colorExampleBackground"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:elevation="20dp"
+            android:layout_marginBottom="@dimen/high_margin"
+            app:layout_constraintBottom_toTopOf="@id/colorPickerBackground"
+            app:layout_constraintStart_toStartOf="@id/colorPickerBackground"
+            app:layout_constraintEnd_toEndOf="@id/colorPickerBackground"
+            />
+
+        <View
+            android:id="@+id/colorExampleTextColor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:elevation="20dp"
+            android:layout_marginBottom="@dimen/high_margin"
+            app:layout_constraintBottom_toTopOf="@id/lightnessPickerTextColor"
+            app:layout_constraintStart_toStartOf="@id/colorPickerBackground"
+            app:layout_constraintEnd_toEndOf="@id/colorPickerBackground"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

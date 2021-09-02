@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="high_margin">16dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="til_corners_radius">8dp</dimen>
+    <dimen name="low_margin">4dp</dimen>
+    <dimen name="material_card_elevation">8dp</dimen>
+    <dimen name="plus_high_margin">32dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+package com.github.pedroscott.yourbusinesscard.extension
+
+import com.github.pedroscott.yourbusinesscard.db.CardEntity
+import com.github.pedroscott.yourbusinesscard.model.CardViewParams
+
+fun CardViewParams.toCardEntity() =
+    CardEntity(
+        name = name,
+        companyName = companyName,
+        phone = phone,
+        email = email,
+        colorBackground = colorBackground,
+        colorText = colorText,
+        logo = logo
+    )

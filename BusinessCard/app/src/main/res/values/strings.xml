@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+
+    <string name="main_act_title">Cartão de Visita</string>
+    <string name="main_act_hint">Buscar</string>
+
+    <string name="card_button_delete">Deletar</string>
+    <string name="card_button_edit">Editar</string>
+
+    <string name="new_card_hint_name">Nome</string>
+    <string name="new_card_hint_company">Empresa</string>
+    <string name="new_card_hint_phone">Telefone de Contato</string>
+    <string name="new_card_hint_email">E-mail</string>
+    <string name="new_card_button_save">Salvar</string>
+    <string name="new_card_card_background_color">Cor de Fundo</string>
+    <string name="new_card_card_text_color">Cor do Texto</string>
+
+    <string name="new_card_error_name">Nome vazio!</string>
+    <string name="new_card_error_company">Empresa vazio!</string>
+    <string name="new_card_error_phone">Telefone Inválido!</string>
+    <string name="new_card_error_email">Email Vazio!</string>
+    <string name="title_share_card">Compartilhando Cartão de Visita</string>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/cvCardItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/medium_margin"
+    android:layout_marginBottom="@dimen/medium_margin"
+    android:layout_marginStart="@dimen/high_margin"
+    android:layout_marginEnd="@dimen/high_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="@dimen/material_card_elevation"
+    app:cardCornerRadius="@dimen/high_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCardItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/high_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cvCardItemLogo"
+            tools:text="Pedro Scott de Paula"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCardItemPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintTop_toBottomOf="@id/tvCardItemName"
+            app:layout_constraintStart_toStartOf="@id/tvCardItemName"
+            tools:text="(61) 9 9999-8888"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCardItemEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintTop_toBottomOf="@id/tvCardItemPhone"
+            app:layout_constraintStart_toStartOf="@id/tvCardItemPhone"
+            tools:text="email@gmail.com"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCardItemCompany"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/high_margin"
+            android:layout_marginEnd="@dimen/high_margin"
+            android:layout_marginBottom="@dimen/high_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvCardItemLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Nome Empresa"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMinTextSize="10sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCardItemLogo"
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="@dimen/high_margin"
+            app:layout_constraintStart_toStartOf="@id/tvCardItemCompany"
+            app:layout_constraintEnd_toEndOf="@id/tvCardItemCompany"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="65dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/ivCardItemLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:importantForAccessibility="no"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageButton
+            android:id="@+id/btCardItemShare"
+            android:importantForAccessibility="no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toBottomOf="@id/tvCardItemEmail"
+            app:layout_constraintBottom_toBottomOf="@id/tvCardItemCompany"
+            app:layout_constraintStart_toStartOf="@id/tvCardItemEmail"
+            app:layout_constraintVertical_bias="1.0"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCardItemMoreOptions"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/high_margin"
+            android:visibility="gone"
+            app:cardElevation="@dimen/material_card_elevation"
+            app:cardBackgroundColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvCardItemCompany"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btCardItemEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
+                    android:layout_marginEnd="@dimen/high_margin"
+                    android:layout_marginStart="@dimen/high_margin"
+                    android:text="@string/card_button_edit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btCardItemDelete"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:icon="@drawable/ic_edit"
+                    />
+
+                <Button
+                    android:id="@+id/btCardItemDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/high_margin"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/card_button_delete"
+                    app:layout_constraintTop_toTopOf="@id/btCardItemEdit"
+                    app:layout_constraintBottom_toBottomOf="@id/btCardItemEdit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btCardItemEdit"
+                    app:icon="@drawable/ic_delete"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
